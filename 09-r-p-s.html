@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rock paper Scissors</title>
+        <style>
+            body {
+                background-color: rgb(25, 25, 25);
+                color: white;
+                font-family: Arial;
+            }
+            .heading-t{
+                font-size: 30px;
+                font-family: Arial;
+                font-weight: bold;
+            }
+            .move-icon{
+                height: 50px;
+            }
+            .move-button{
+                background-color: transparent;
+                border: 3px solid white;
+                padding: 30px;
+                border-radius: 60px;
+                margin-right: 10px;
+                cursor: pointer;
+            }
+            .result{
+                font-size: 30px;
+                font-weight: bold;
+                margin-top: 50px;
+
+            }
+            .score{
+                margin-top: 60px;
+            }
+            .reset-score-but{
+                background-color: white;
+                color: black;
+                font-size: 15px;
+                padding: 8px 10px;
+                cursor: pointer;
+            }
+
+
+
+
+
+        </style>
+         
+
+    </head>
+    <body>
+
+        <p class="heading-t"> Rock Paper Scissors</p> 
+        <button class="move-button" onclick="
+            playGame('rock');
+         "><img class="move-icon" src="rock-emoji.png"></button>
+        <button class="move-button" onclick="
+            playGame('paper');
+        
+        "><img class="move-icon" src="paper-emoji.png"></button>
+        <button class="move-button" onclick="
+            playGame('scissors');      
+        
+        "><img class="move-icon" src="scissors-emoji.png"></button>
+
+        <p class = "js-result result"></p>
+        <p class="js-move">
+           
+        </p>
+
+        <p class="js-score score"></p>
+
+
+        <button onclick="
+            score.wins=0;
+            score.loses=0;
+            score.ties=0;
+            localStorage.removeItem('score');
+            updateScoreElement();
+        
+        "     class = "reset-score-but">Reset Button</button>
+
+
+    
+
+        <script src="10-rps.js">
+           
+        </script>
+
+    </body>
+</html>

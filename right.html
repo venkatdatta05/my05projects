@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>demo1</title>
+         
+
+    </head>
+    <body>
+    <input class="inputText" onkeydown="printText();">
+    <p class="belowText"></p>
+        
+        <script>
+            function printText(){
+            let inputValue = document.querySelector('.inputText').value;
+            document.querySelector('.belowText').innerHTML = inputValue;
+
+            }
+
+        </script>
+
+    </body>
+</html>
